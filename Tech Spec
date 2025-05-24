@@ -78,3 +78,16 @@ Accessibility: semantic HTML, ARIA attributes, keyboard navigation support.
 ✅ Bonus Features
 User avatars/profile pictures.
 Dark mode toggle on frontend.
+
+
+| **Type of Outcome**   | **Base Points** | **Bonus Mechanics**                           | **Total Possible** |
+| --------------------- | --------------- | --------------------------------------------- | ------------------ |
+| ✅ Correct Guess      | +5              | +1 per 1% actual price move                   | Up to +15          |
+| ❌ Wrong Guess        | -3              | -1 per 1% move against you                    | Up to -10          |
+| 🔄 Perfect Guess      | +10             | If guess is within 0.1% of target             | +10                |
+| 🔁 3 Streak Bonus     | —               | +10 extra for 3 correct in a row              | Bonus              |
+| 🧠 Early Bird Bonus   | +3              | If guessed within first 10 min of time window |                    |
+| 📉 Risky Market Bonus | +5              | If predicted during >5% volatility window     |                    |
+
+Each user starts with: 100 points
+“Daily Login Bonus” - Give users (+10 + streak / 10) points every 24h (only if their balance is under 30)

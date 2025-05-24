@@ -1,6 +1,10 @@
 const path = "";
 
 const webData = {
-    title: "PumpOrDump",
+    title: "PumpOrDump", 
 };
 
+const user = {
+    theme,
+    poinst: 100,
+};

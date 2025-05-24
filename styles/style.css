@@ -2,3 +2,22 @@
     margin: 0;
     padding: 0;
 }
+
+/* test */
+:root {
+    --bg-color: #ffffff;
+    /* default for light */
+    --text-color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #f0f0f0;
+    }
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
