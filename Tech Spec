@@ -1,0 +1,80 @@
+📜 Technical Specification — Crypto Trend Prediction Game
+
+🧩 Project Overview
+Build a web application where registered users predict whether popular cryptocurrencies (e.g., Bitcoin, Ethereum, Solana) will increase or decrease in price over a selected time window (default 1 hour). Users submit predictions, and after the prediction period, the system evaluates the accuracy against real market data, awarding or deducting points accordingly. A leaderboard ranks users by their total points, fostering competition.
+
+🔍 Functional Requirements
+1. User Management
+Users must register with username, email, and password.
+
+Passwords stored hashed (bcrypt or equivalent).
+
+Login returns JWT token for authenticated requests.
+
+Auth middleware protects all user-specific routes.
+
+Users can view and update their profile (email, username).
+
+2. Crypto Market Data
+Fetch real-time crypto prices from CoinGecko API every minute.
+
+Support at least 5 popular coins: BTC, ETH, SOL, ADA, BNB.
+
+Cache latest price data in memory or DB for fast reads.
+
+Display current price, 24h change %, and timestamp.
+
+3. Prediction Submission
+Authenticated users can submit predictions: select coin + direction (up/down) + time window (1h default).
+
+Restrict to max 5 predictions per user per day (configurable).
+
+Store timestamp of prediction submission.
+
+4. Prediction Resolution
+Every hour, a scheduled job runs:
+
+For each prediction older than the selected window, fetch the price at prediction time and current price.
+
+Determine if the prediction was correct (price moved in predicted direction).
+
+Mark prediction as resolved with result: win or lose.
+
+Update user’s total score: +10 points for correct, -5 points for incorrect.
+
+Notify user (via UI update; email notification optional).
+
+5. Leaderboard
+Show top 10 users sorted by score (descending).
+
+Display username, score, and win rate (percentage of correct predictions).
+
+6. Prediction History
+Users can see their own predictions: coin, direction, timestamp, result, points earned/lost.
+
+Paginated list with filters (e.g., resolved/unresolved).
+
+🎨 Visual / UX Requirements
+Login/Register pages: clean forms, client-side validation, error feedback.
+
+Dashboard:
+
+Show real-time coin data in a table or cards with prices and 24h change.
+
+Prediction form with dropdown for coins, radio buttons for direction, dropdown for time window.
+
+Submit button disabled if prediction limits reached.
+
+Prediction history page: tabular view, with filters and clear status indicators (green/red for wins/losses).
+
+Leaderboard page: top users displayed with avatars (optional), scores, and win rates.
+
+Responsive design: fully usable on desktop and mobile, with collapsible menus and readable fonts.
+
+Feedback & loading states: show spinners or placeholders during API calls, success/error messages for actions.
+
+Accessibility: semantic HTML, ARIA attributes, keyboard navigation support.
+
+✅ Bonus Features
+User avatars/profile pictures.
+Dark mode toggle on frontend.
