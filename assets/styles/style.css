@@ -5,8 +5,8 @@
 
 /* test */
 :root {
-    --bg-color: #ffffff;
     /* default for light */
+    --bg-color: #ffffff;
     --text-color: #000000;
 }
 
