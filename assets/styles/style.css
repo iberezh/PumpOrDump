@@ -92,6 +92,7 @@ ul {
   /*=============== NAV ===============*/
   .nav {
     height: var(--header-height);
+    user-select: none;
   }
   .nav__data {
     height: 100%;

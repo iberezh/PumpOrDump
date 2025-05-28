@@ -6,18 +6,23 @@
 ✅ Create basic project folder structure
 ✅ Basics of dark mode
 
-2st day (05.25.2025)
+2th day (05.25.2025)
 ✅ create function to add elements
 ✅ refactor function to add title and icon to the page
 ✅ added temporary icon for the main page
 ✅ edited folder structure
 
-3st day (05.26.2025)
+3rd day (05.26.2025)
 ✅ create colour pallate
 ✅ create wibsite design template
 
-4st day (05.27.2025)
+4th day (05.27.2025)
 ✅ started building navbar
+
+5th day (05.28.2025)
+✅ finished building navbar
+✅ deleted web-source for icons and replaced it with svg
+❌ added actual content to navbar
 
 Last day (predict - 05.31.2025)
 ❌add topics and wibsite url, insert repository in github pages to host it
